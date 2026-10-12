@@ -1,0 +1,16 @@
+plugins { id 'fabric-loom' version '1.14-SNAPSHOT' }
+version = project.mod_version
+base { archivesName = 'spears-radio' }
+repositories { mavenCentral() }
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation "javazoom:jlayer:1.0.1"   // MP3 decoder
+    include "javazoom:jlayer:1.0.1"          // bundled inside the mod jar
+}
+processResources { inputs.property "version", project.version
+    filesMatching("fabric.mod.json") { expand "version": project.version } }
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+java { withSourcesJar(); sourceCompatibility = JavaVersion.VERSION_21; targetCompatibility = JavaVersion.VERSION_21 }

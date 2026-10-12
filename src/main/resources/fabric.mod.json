@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "spearsradio",
+  "version": "${version}",
+  "name": "Spears Radio",
+  "description": "Play internet radio / MP3 stream URLs and .m3u/.pls playlists in game. No account needed.",
+  "environment": "client",
+  "entrypoints": { "client": ["com.spearsradio.RadioClient"] },
+  "depends": { "fabricloader": ">=0.17.0", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}

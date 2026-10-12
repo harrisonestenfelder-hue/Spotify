@@ -1,0 +1,10 @@
+{
+  "key.category.spearsradio.main": "Spears Radio",
+  "key.spearsradio.open": "Open Radio",
+  "key.spearsradio.toggle": "Play / Pause",
+  "key.spearsradio.next": "Next",
+  "key.spearsradio.prev": "Previous",
+  "key.spearsradio.repeat": "Cycle Repeat (Off/All/One)",
+  "key.spearsradio.vol_up": "Volume Up",
+  "key.spearsradio.vol_down": "Volume Down"
+}
